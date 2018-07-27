@@ -1,0 +1,25 @@
+{
+  "name": "random-game-inspirator",
+  "version": "1.0.0",
+  "description": "get random inspiration to add a game style to your idea",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "budo src/main.js:build.js -o -l -H 127.0.0.1",
+    "build": "browserify budo src/main.js -o docs/build.js ; cp index.html docs/index.html",
+    "publish": "npm run build ; git add . ; git commit -m $(release npm version) "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sombriks/random-game-inspirator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sombriks/random-game-inspirator/issues"
+  },
+  "homepage": "https://github.com/sombriks/random-game-inspirator#readme"
+}
