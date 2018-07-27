@@ -10,10 +10,17 @@ build:
 	cp index.html docs/index.html
 	rm -rf build.js # sanity
 
-publish: 
-	npm run build
+publish: build
 	git add .
 	git commit -m "prepare release"
+	npm version minor
+	git tag `node -e "console.log(require('./package.json').version);"`
+	git push origin master
+	git push origin `node -e "console.log(require('./package.json').version);"`
+
+patch: build 
+	git add .
+	git commit -m "just like release but a minor bug you know"
 	npm version minor
 	git tag `node -e "console.log(require('./package.json').version);"`
 	git push origin master
