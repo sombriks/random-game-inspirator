@@ -15,5 +15,5 @@ publish:
 	git add .
 	git commit -m "prepare release"
 	npm version minor
-	git tag $(node -e "console.log(require('./package.json').version);")
+	git tag `node -e "console.log(require('./package.json').version);"`
 	git push
