@@ -32,6 +32,22 @@
     "budo": "^11.3.2",
     "common-shakeify": "^0.5.0",
     "envify": "^4.1.0",
-    "uglify": "^0.1.5"
+    "uglify": "^0.1.5",
+    "vueify": "^9.4.1"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ],
+      "vueify",
+      "envify",
+      "browserify-css"
+    ]
   }
 }
