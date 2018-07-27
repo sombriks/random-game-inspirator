@@ -1,6 +1,6 @@
 {
   "name": "random-game-inspirator",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "get random inspiration to add a game style to your idea",
   "main": "index.js",
   "directories": {
