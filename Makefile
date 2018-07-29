@@ -20,8 +20,8 @@ publish: build
 
 patch: build 
 	git add .
-	git commit -m "just like release but a minor bug you know"
-	npm version minor
+	git commit -m "just like release but a patch bug you know"
+	npm version patch
 	git tag `node -e "console.log(require('./package.json').version);"`
 	git push origin master
 	git push origin `node -e "console.log(require('./package.json').version);"`

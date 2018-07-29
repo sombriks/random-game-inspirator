@@ -39,8 +39,8 @@
   },
   "dependencies": {
     "dexie": "^2.0.4",
+    "flexboxgrid": "^6.3.1",
     "vue": "^2.5.16",
-    "vue-idb": "^0.2.0",
     "vue-router": "^3.0.1"
   },
   "browserify": {
