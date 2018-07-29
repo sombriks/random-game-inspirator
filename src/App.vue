@@ -1,6 +1,8 @@
 <template>
-  <div class="content">
-    <router-view></router-view>
+  <div>
+    <transition mame="fade" mode="in-out">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -14,10 +16,8 @@ export default {
     routes: [
       { path: "/", redirect: "/inspirator" },
       { path: "/inspirator", component: Inspirator },
-      { path: "/theinspiration", component: TheInspiration }
+      { path: "/theinspiration/:id1/:id2", component: TheInspiration }
     ]
   })
 }
 </script>
-<style scoped>
-</style>

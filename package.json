@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "make dev",
     "build": "make build",
+    "release": "make publish",
     "publish": "make publish",
     "patch": "make patch"
   },
@@ -40,6 +41,7 @@
   "dependencies": {
     "dexie": "^2.0.4",
     "flexboxgrid": "^6.3.1",
+    "randomcolor": "^0.5.3",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },
