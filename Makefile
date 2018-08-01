@@ -1,10 +1,22 @@
 # 
 export PATH := node_modules/.bin:$(PATH)
 
-dev:
+clean:
+	rm -rf assets
+	rm -rf docs/assets
+
+assets:
+	mkdir -p assets/font-awesome/
+	mkdir -p docs/assets/font-awesome/
+	cp -R node_modules/font-awesome/fonts assets/font-awesome/
+	cp -R node_modules/font-awesome/fonts docs/assets/font-awesome/
+	cp -R node_modules/font-awesome/css assets/font-awesome/
+	cp -R node_modules/font-awesome/css docs/assets/font-awesome/
+
+dev: assets
 	cross-env NODE_ENV=development budo src/main.js:build.js -H 127.0.0.1 -o -l
 
-build: 
+build: assets
 	cross-env NODE_ENV=production browserify -p common-shakeify src/main.js -o build.js
 	uglifyjs build.js --compress > docs/build.js
 	cp index.html docs/index.html

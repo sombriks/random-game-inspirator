@@ -1,7 +1,7 @@
 <template>
   <div class="content row center-xs middle-xs">
     <div class="col-xs-12">
-      <button @click="inspire">GET {{more}}INSPIRATION</button>
+      <button @click="inspire" class="big">GET {{more}}INSPIRATION</button>
     </div>
   </div>
 </template>
@@ -20,17 +20,18 @@ export default {
         this.count++
         this.more = "MORE "
         this.g1 = Math.floor(Math.random() * this.c)
-      } else if (this.count == 1) {
+        if (this.g1 == 0) {
+          this.count--;
+          this.inspire();
+        }
+      } else if (this.count >= 1) {
         this.g2 = Math.floor(Math.random() * this.c)
-        if (this.g1 == 0 || this.g2 == 0) this.inspire()
-        // console.log(`g1:[${this.g1}] g2:[${this.g2}] `)
+        if (this.g2 == 0) this.inspire()
+        if (this.g1 == this.g2) this.inspire()
         this.$router.push(`/theinspiration/${this.g1}/${this.g2}`);
       }
     }
   }
 }
 </script>
-<style>
-
-</style>
 

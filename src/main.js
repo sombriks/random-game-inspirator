@@ -3,8 +3,10 @@ import "./main.css";
 
 import Vue from "vue";
 import VueRouter from "vue-router";
+import VueSocialSharing from "vue-social-sharing";
 
 Vue.use(VueRouter);
+Vue.use(VueSocialSharing);
 
 import App from "./App.vue";
 import db from "./db";

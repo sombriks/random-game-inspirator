@@ -41,9 +41,11 @@
   "dependencies": {
     "dexie": "^2.0.4",
     "flexboxgrid": "^6.3.1",
+    "font-awesome": "^4.7.0",
     "randomcolor": "^0.5.3",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-social-sharing": "^2.3.3"
   },
   "browserify": {
     "transform": [
